@@ -12,12 +12,14 @@ Supervisor Config
 	  vi /etc/supervisord.conf
 	找到
 	  [include]
+====
 	  files = /etc/supervisor/conf.d/*.conf
 	
 	  然后再/etc/supervisor/conf.d/ 目录里放.conf文件。
 	  比如example.conf
 
 	  [program:example-8888]
+====
 	  command=/var/www/example/server.py --port=8888
 	  autostart=true ; supervisord守护程序启动时自动启动tornado
 	  autorestart=true ; supervisord守护程序重启时自动重启tornado
