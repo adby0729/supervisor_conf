@@ -8,7 +8,6 @@ Supervisor Config
 ===============
 1. 生成配置文件
   $ echo_supervisord_conf > /etc/supervisord.conf<br>
-
 2.修改配置文件
   vi /etc/supervisord.conf<br>
 找到
