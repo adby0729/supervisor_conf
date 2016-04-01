@@ -27,6 +27,7 @@ Supervisor Config
 	  directory=/var/www/example ; cd 到应用目录
 	  stdout_logfile = /var/www/example/log/server-8888.log
 [program:example]
+====
 	  command=/home/php/bin/php src/main.php
 	  user=root
 	  directory=/home/application/jobman/
