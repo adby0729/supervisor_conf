@@ -17,19 +17,19 @@ Supervisor Config
   然后再/etc/supervisor/conf.d/ 目录里放.conf文件。<br>
   比如example.conf
 
-  [program:example-8888]<br>
-  command=/var/www/example/server.py --port=8888<br>
-  autostart=true ; supervisord守护程序启动时自动启动tornado<br>
-  autorestart=true ; supervisord守护程序重启时自动重启tornado<br>
-  redirect_stderr=true ; 将stderr重定向到stdout<br>
-  user=www-data<br>
-  directory=/var/www/example ; cd 到应用目录<br>
-  stdout_logfile = /var/www/example/log/server-8888.log<br>
-  [program:example]<br>
-  command=/home/php/bin/php src/main.php
-  user=root
-  directory=/home/application/jobman/
-  autostart=true
-  startsecs=10
+	  [program:example-8888]<br>
+	  command=/var/www/example/server.py --port=8888<br>
+	  autostart=true ; supervisord守护程序启动时自动启动tornado<br>
+	  autorestart=true ; supervisord守护程序重启时自动重启tornado<br>
+	  redirect_stderr=true ; 将stderr重定向到stdout<br>
+	  user=www-data<br>
+	  directory=/var/www/example ; cd 到应用目录<br>
+	  stdout_logfile = /var/www/example/log/server-8888.log<br>
+	  [program:example]<br>
+	  command=/home/php/bin/php src/main.php
+	  user=root
+	  directory=/home/application/jobman/
+	  autostart=true
+	  startsecs=10
   autorestart=true
   startretries=8640
