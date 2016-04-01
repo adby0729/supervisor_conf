@@ -1,5 +1,7 @@
 Supervisor install
+===============
 sudo pip install supervisor
+===============
 https://github.com/adby0729/supervisor_conf/blob/master/init.d/supervisor 放置到 /etc/init.d/ 下
 配置
 
@@ -20,7 +22,7 @@ files = /etc/supervisor/conf.d/*.conf
 然后再/etc/supervisor/conf.d/ 目录里放.conf文件。
 比如example.conf
 
-[program:example-8888]
+[program:example-8888]\n<br>
 command=/var/www/example/server.py --port=8888
 autostart=true ; supervisord守护程序启动时自动启动tornado
 autorestart=true ; supervisord守护程序重启时自动重启tornado
