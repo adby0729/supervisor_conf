@@ -25,4 +25,11 @@ Supervisor Config
   user=www-data<br>
   directory=/var/www/example ; cd 到应用目录<br>
   stdout_logfile = /var/www/example/log/server-8888.log<br>
-
+  [program:example]<br>
+  command=/home/php/bin/php src/main.php
+  user=root
+  directory=/home/application/jobman/
+  autostart=true
+  startsecs=10
+  autorestart=true
+  startretries=8640
