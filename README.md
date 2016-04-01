@@ -12,13 +12,12 @@ Supervisor Config
 	  vi /etc/supervisord.conf
 	找到
 	  [include]
-====
 	  files = /etc/supervisor/conf.d/*.conf
 	
 	  然后再/etc/supervisor/conf.d/ 目录里放.conf文件。
 	  比如example.conf
 
-	  [program:example-8888]
+[program:example-8888]
 ====
 	  command=/var/www/example/server.py --port=8888
 	  autostart=true ; supervisord守护程序启动时自动启动tornado
@@ -27,7 +26,7 @@ Supervisor Config
 	  user=www-data<br>
 	  directory=/var/www/example ; cd 到应用目录
 	  stdout_logfile = /var/www/example/log/server-8888.log
-	  [program:example]<br>
+[program:example]
 	  command=/home/php/bin/php src/main.php
 	  user=root
 	  directory=/home/application/jobman/
